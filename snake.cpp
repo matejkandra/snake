@@ -4,7 +4,7 @@
 #include "snake.h"
 
 void Snake::eat() {
-    if(Helper::Vector2::compare(snakePosition[0], foodPos) == true){
+    if(Helper::Vector2::compare(snakePosition[0], foodPos)){
         snakeLength++;
     }
 }
