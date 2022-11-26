@@ -3,8 +3,8 @@
 //
 
 
-#ifndef PHYSICS_ENGINE_SNAKE_H
-#define PHYSICS_ENGINE_SNAKE_H
+#ifndef SNAKE_SNAKE_H
+#define SNAKE_SNAKE_H
 
 #include <cstdlib>
 #include "Helper.h"
@@ -26,4 +26,4 @@ public:
     void move();
 };
 
-#endif //PHYSICS_ENGINE_SNAKE_H
+#endif //SNAKE_SNAKE_H

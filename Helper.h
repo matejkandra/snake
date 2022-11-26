@@ -2,8 +2,8 @@
 // Created by Matej Kandra on 25/11/2022.
 //
 
-#ifndef PHYSICS_ENGINE_HELPER_H
-#define PHYSICS_ENGINE_HELPER_H
+#ifndef SNAKE_HELPER_H
+#define SNAKE_HELPER_H
 
 class Helper{
 public:
@@ -16,4 +16,4 @@ public:
     };
 };
 
-#endif //PHYSICS_ENGINE_HELPER_H
+#endif //SNAKE_HELPER_H
