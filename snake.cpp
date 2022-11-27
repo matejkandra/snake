@@ -36,9 +36,7 @@ void Snake::collision() {
     if(snakePosition.at(0).x > BORDER || snakePosition.at(0).y > BORDER || snakePosition.at(0).x < -BORDER || snakePosition.at(0).y < -BORDER) {
         exit(0);
     }else if(Helper::Vector2::compare(snakePosition.at(0), foodPos)){
-        Snake::eat();
-    }else{
-        move();
+
     }
 }
 
@@ -47,33 +45,24 @@ void Snake::placeFood() {
 }
 
 void Snake::move() {
-    Helper::Vector2 headBufferVector = {};
-    Helper::Vector2 BufferVector = {};
+    Helper::Vector2 val = snakePosition.at(0);
+    std::rotate(snakePosition.rbegin(), snakePosition.rbegin() + 1, snakePosition.rend());
     switch(orientation){
         case 'f':
-            headBufferVector = snakePosition.at(0);
+            snakePosition.at(0) = val;
             snakePosition.at(0).y++;
             break;
         case 'd':
-            headBufferVector = snakePosition.at(0);
+            snakePosition.at(0) = val;
             snakePosition.at(0).y--;
             break;
         case 'l':
-            headBufferVector = snakePosition.at(0);
+            snakePosition.at(0) = val;
             snakePosition.at(0).x--;
             break;
         case 'r':
-            headBufferVector = snakePosition.at(0);
+            snakePosition.at(0) = val;
             snakePosition.at(0).x++;
             break;
-    }
-
-    for (int i = snakePosition.size() - 1; i > 1; --i) {
-        BufferVector = snakePosition.at(i);
-        snakePosition.at(i++) = BufferVector;
-        if(Helper::Vector2::compare(snakePosition.at(i--), headBufferVector)){
-            snakePosition.at(i--) = headBufferVector;
-        }
-
     }
 }

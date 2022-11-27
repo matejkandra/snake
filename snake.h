@@ -10,6 +10,7 @@
 #include <iostream>
 #include "Helper.h"
 #include <vector>
+#include <algorithm>
 
 class Snake{
 public:

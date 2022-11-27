@@ -12,7 +12,7 @@
 class Demo{
 public:
     Vector2 SCREEN_DIMENSIONS = {1000,1000};
-    int RATIO = 50;
+    Vector2 RATIO = {50,50};
 
     void play();
 };
