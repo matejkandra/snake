@@ -7,6 +7,7 @@
 #define SNAKE_SNAKE_H
 
 #include <cstdlib>
+#include <iostream>
 #include "Helper.h"
 #include <vector>
 
